@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+    <%- include('frag/head'); %>
+
+    <body>
+        <main class="login">
+            <div class="messages">
+                <% msgs.forEach(m => { %>
+                    <span class="message"><%= m %></span>
+                <% }) %>
+            </div>
+            <form action="/api/authenticate" method="POST">
+                <input
+                    type="password"
+                    id="password"
+                    name="code"
+                    placeholder="auth code"
+                    autocomplete="off"
+                    autofocus>
+            </form>
+        </main>
+    </body>
+</html>
